@@ -11,21 +11,23 @@
 
       <BoxInfos />
 
-      <Map />
+      <BaseMap />
     </section>
   </div>
 </template>
 
 <script>
 import BoxInfos from './components/BoxInfos.vue'
-import Map from './components/Map.vue'
+//import Map from './components/Map.vue'
+import BaseMap from './components/BaseMap.vue'
 import { mapState } from 'vuex'
 
 export default {
   name: 'App',
   components: {
     BoxInfos,
-    Map
+    //Map,
+    BaseMap
   },
   computed: {
     ... mapState({

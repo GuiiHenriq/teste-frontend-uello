@@ -98,11 +98,17 @@
         </div>
 
         <div>
-          <p>Sua entrega é a nº: <span>19</span></p>
-          <p>Entrega Atual: <span>18</span></p>
-          <p>Quantidade de volumes: <span>3</span></p>
-          <p>Motorista: <span>Vinicius Marques do Nascimento</span></p>
-          <p>Horário Estimado: <span>15:29 - 16:29</span></p>
+          <div>
+            <img src="../assets/icon-solicitacao-white.svg" alt="">
+            <img src="../assets/icon-separacao-white.svg" alt="">
+            <img src="../assets/icon-transito-white.svg" alt="">
+            <img src="../assets/icon-entregue-white.svg" alt="">
+          </div>
+
+          <div>
+            <p>Status do pedido: Saiu para entrega</p>
+            <p>Horário estimado:  15:29 - 16:29</p>
+          </div>
         </div>
       </div>
 
@@ -177,6 +183,7 @@ export default {
 [data-mobile] {display: none}
 $white: #FFFFFF;
 $red: #E63B4F;
+$blue: #0B4F6C;
 
 .container {
   max-width: 380px;
@@ -330,7 +337,7 @@ $red: #E63B4F;
 
   &__delivery {
     margin-top: 40px;
-    background: #0B4F6C;
+    background: $blue;
     border-radius: 4px;
     padding: 20px 12px 20px 14px;
 
@@ -377,7 +384,7 @@ $red: #E63B4F;
       font-weight: 700;
       font-size: 16px;
       line-height: 16px;
-      color: #0B4F6C;
+      color: $blue;
 
       span {
         font-weight: 600;
@@ -528,17 +535,10 @@ $red: #E63B4F;
     border-radius: 0;
     padding: 15px 10px 0 10px;
 
-    &__status,
-    &__delivery,
-    &__address,
-    &__hour,
-    &__line {
-      display: none;
-    }
-
     &__data {
       margin: 0;
-      background: #0B4F6C;
+      background: $blue;
+      color: $white;
       border-radius: 4px;
     }
 
@@ -590,7 +590,7 @@ $red: #E63B4F;
       }
 
       &--cta {
-        background: #0B4F6C;
+        background: $blue;
         border-radius: 4px;
         margin: 0 12px 15px 15px;
         padding: 12px 0;
@@ -611,7 +611,7 @@ $red: #E63B4F;
           font-weight: 700;
           font-size: 16px;
           line-height: 16px;
-          color: #0B4F6C;
+          color: $blue;
         }
       }
 
