@@ -2,9 +2,9 @@
 # Teste Uello :rocket:
 Criado uma aplicação com layout estático e intregrado com Mapbox.
 
- - :package: Utilizado Vuex para armazenar estados via store do Nome da Empresa e Endereço e assim renderizar nos componentes;
- - :earth_americas: Integrado MapBox;
- - :key: Utilizado arquivo .env para enviar KEY do Mapbox.
+:package: Utilizado Vuex para armazenar estados via store do Nome da Empresa e Endereço e assim renderizar nos componentes;
+:earth_americas: Integrado MapBox;
+:key: Utilizado arquivo .env para enviar KEY do Mapbox.
 
 ## Rodar Projeto :computer:
 
