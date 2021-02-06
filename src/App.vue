@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <section class="title-company">
-      <h1>teste</h1>
+      <h1>{{nameCompany}}</h1>
     </section>
 
     <section class="content">
@@ -19,13 +19,19 @@
 <script>
 import BoxInfos from './components/BoxInfos.vue'
 import Map from './components/Map.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'App',
   components: {
     BoxInfos,
     Map
-  }
+  },
+  computed: {
+    ... mapState({
+      nameCompany: state => state.nameCompany
+    })
+  },
 }
 </script>
 
@@ -92,6 +98,7 @@ export default {
       height: auto;
       position: sticky;
       top: 0;
+      z-index: 2;
     }
   }
 }
