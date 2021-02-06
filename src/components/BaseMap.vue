@@ -13,7 +13,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.teste)
     mapboxgl.accessToken = this.accessToken;
 
     new mapboxgl.Map({

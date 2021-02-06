@@ -91,18 +91,18 @@
 
     <div class="box-infos" data-mobile>
       <div class="box-infos__data">
-        <div class="circle">
+        <div class="box-infos__data--circle">
           <p>Falta</p>
           <h1>1</h1>
           <p>Entrega</p>
         </div>
 
-        <div>
+        <div class="box-infos__data--status">
           <div>
-            <img src="../assets/icon-solicitacao-white.svg" alt="">
-            <img src="../assets/icon-separacao-white.svg" alt="">
-            <img src="../assets/icon-transito-white.svg" alt="">
-            <img src="../assets/icon-entregue-white.svg" alt="">
+            <span><img src="../assets/icon-separacao-white.svg" alt=""></span>
+            <span><img src="../assets/icon-solicitacao-white.svg" alt=""></span>
+            <span><img src="../assets/icon-transito-white.svg" alt=""></span>
+            <span><img src="../assets/icon-entregue-white.svg" alt=""></span>
           </div>
 
           <div>
@@ -184,11 +184,26 @@ export default {
 $white: #FFFFFF;
 $red: #E63B4F;
 $blue: #0B4F6C;
+$silver: #CCCCCC;
 
 .container {
   max-width: 380px;
   width: 100%;
   z-index: 1;
+}
+
+.box-infos::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.box-infos::-webkit-scrollbar {
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.box-infos::-webkit-scrollbar-thumb {
+	background-color: $red;
 }
 
 .box-infos {
@@ -199,7 +214,10 @@ $blue: #0B4F6C;
   //max-width: 350px;
   //width: 100%;  
   margin-left: 20px;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: auto;
   z-index: 1;
 
   &__help {
@@ -279,7 +297,7 @@ $blue: #0B4F6C;
 
           &::after {
             width: 82px;
-            left: 34px;
+            left: 33px;
           }
         }
       }
@@ -292,7 +310,7 @@ $blue: #0B4F6C;
 
           &::after {
             width: 84px;
-            left: 44px;
+            left: 43px;
           }
         }
       }
@@ -306,7 +324,7 @@ $blue: #0B4F6C;
           &::after {
             width: 70px;
             left: 37px;
-            background: #CCC;
+            background: $silver;
           }
         }
 
@@ -319,8 +337,8 @@ $blue: #0B4F6C;
         p {
           &::before {
             margin-left: 21px;
-            background: #CCC;
-            border-color: #CCC;
+            background: $silver;
+            border-color: $silver;
           }
 
           &::after {
@@ -401,12 +419,27 @@ $blue: #0B4F6C;
   &__data {
     display: flex;
     margin-top: 30px;
+
+    .circle {
+      width: 40%;
+      background: url('../assets/circle-progress.svg') no-repeat;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      p {
+        &:first-child {
+          margin-top: 8px;
+        }
+      }
+    }
     
     p {
       font-weight: 700;
       font-size: 14px;
       line-height: 13.62px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
 
       span {
         font-weight: 600;
@@ -537,9 +570,140 @@ $blue: #0B4F6C;
 
     &__data {
       margin: 0;
+      height: 120px;
       background: $blue;
       color: $white;
       border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--circle {
+        width: 40%;
+        background: url('../assets/circle-progress-mobile.png') no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 84px;
+        height: 84px;
+
+        p, h1 {
+          margin: 0;
+        }
+
+        h1 {
+          font-size: 17px;
+        }
+      }
+
+      &--status {
+        width: 60%;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          &:first-child {
+            margin-bottom: 12px;
+          }
+        }
+
+        span {
+          display: inline-flex;
+          margin-left: 20px;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            background: $white;
+            border: 1px solid $red;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            top: 19px;
+          }
+
+          &::after {
+            content: "";
+            width: 24px;
+            height: 1px;
+            background: $red;
+            display: block;
+            position: absolute;
+            top: 24px;
+            left: 11px;
+          }
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:nth-child(1) {
+            &::before {
+              top: 21px;
+            }
+
+            &::after {
+              width: 24px;
+              top: 26px;
+              left: 11px;
+            }
+          }
+
+          &:nth-child(2) {
+            &::before {
+              top: 22px;
+            }
+
+            &::after {
+              width: 24px;
+              top: 26px;
+              left: 11px;
+            }
+          }
+
+          &:nth-child(3) {
+            &::before {
+              top: 21px;
+            }
+
+            &::after {
+              width: 25px;
+              top: 26px;
+              left: 11px;
+              background: $silver;
+            }
+          }
+
+          &:nth-child(4) {
+            &::before {
+              top: 20px;
+              background: $silver;
+              border: 0;
+            }
+
+            &::after {
+              content: none;
+            }
+          }
+        }
+
+        p {
+          font-weight: 600;
+          font-size: 12px;
+          margin: 0;
+
+          &:first-child {
+            margin-top: 15px;
+          }
+        }
+      }
     }
 
     &__help {
