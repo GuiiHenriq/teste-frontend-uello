@@ -9,22 +9,22 @@
 
       <div class="box-infos__status">
         <div class="box-infos__status--solicitacao">
-          <img src="../assets/icon-solicitacao.svg" alt="">
+          <img src="../assets/icon-solicitacao.svg" alt="Ilustração Solicitação">
           <p>Solicitação</p>
         </div>
 
         <div class="box-infos__status--separacao">
-          <img src="../assets/icon-separacao.svg" alt="">
+          <img src="../assets/icon-separacao.svg" alt="Ilustração Separação">
           <p>Pedido<br>em separação</p>
         </div>
 
         <div class="box-infos__status--transito">
-          <img src="../assets/icon-transito.svg" alt="">
+          <img src="../assets/icon-transito.svg" alt="Ilustração Trânsito">
           <p>Motorista<br>em trânsito</p>
         </div>
 
         <div class="box-infos__status--entregue">
-          <img src="../assets/icon-entregue.svg" alt="">
+          <img src="../assets/icon-entregue.svg" alt="Ilustração Entrega">
           <p>Pedido<br>entregue</p>
         </div>
       </div>
@@ -35,17 +35,17 @@
       </div>
 
       <div class="box-infos__address">
-        <img src="../assets/icon-map.svg" alt="">
+        <img src="../assets/icon-map.svg" alt="Ilustração Mapa">
         <p>{{address}}</p>
       </div>
 
       <div class="box-infos__hour">
-        <img src="../assets/icon-hour.svg" alt="">
+        <img src="../assets/icon-hour.svg" alt="Ilustração Horário">
         <p>HORÁRIO ESTIMADO: <span>14:45 - 16:58</span></p>
       </div>
 
       <div class="box-infos__line">
-        <img src="../assets/line.svg" alt="">
+        <img src="../assets/line.svg" alt="Linha de Separação">
       </div>
 
       <div class="box-infos__data">
@@ -66,7 +66,7 @@
 
       <div class="box-infos__timeline">
         <div class="box-infos__timeline--title">
-          <img src="../assets/icon-timeline.svg" alt="">
+          <img src="../assets/icon-timeline.svg" alt="Ilustração Histórico">
           <h1>Histórico</h1>
         </div>
 
@@ -99,10 +99,10 @@
 
         <div class="box-infos__data--status">
           <div>
-            <span><img src="../assets/icon-separacao-white.svg" alt=""></span>
-            <span><img src="../assets/icon-solicitacao-white.svg" alt=""></span>
-            <span><img src="../assets/icon-transito-white.svg" alt=""></span>
-            <span><img src="../assets/icon-entregue-white.svg" alt=""></span>
+            <span><img src="../assets/icon-separacao-white.svg" alt="Ilustração Separação"></span>
+            <span><img src="../assets/icon-solicitacao-white.svg" alt="Ilustração Solicitação"></span>
+            <span><img src="../assets/icon-transito-white.svg" alt="Ilustração Trânsito"></span>
+            <span><img src="../assets/icon-entregue-white.svg" alt="Ilustração Entrega"></span>
           </div>
 
           <div>
@@ -122,7 +122,7 @@
         </div>
 
         <div class="box-infos__data-bottom--address">
-          <img src="../assets/icon-map.svg" alt="">
+          <img src="../assets/icon-map.svg" alt="Ilustração Mapa">
           <p>{{address}}</p>
         </div>
 
@@ -131,13 +131,13 @@
         </div>
 
         <div class="box-infos__data-bottom--hour">
-          <img src="../assets/icon-hour.svg" alt="">
+          <img src="../assets/icon-hour.svg" alt="Ilustração Horário">
           <p>HORÁRIO ESTIMADO: <span>14:45 - 16:58</span></p>
         </div>
 
         <div class="box-infos__data-bottom--timeline">
           <div class="box-infos__timeline--history">
-            <img src="../assets/icon-timeline.svg" alt="">
+            <img src="../assets/icon-timeline.svg" alt="Ilustração Histórico">
             <h1>Histórico</h1>
           </div>
 

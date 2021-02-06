@@ -18,7 +18,6 @@
 
 <script>
 import BoxInfos from './components/BoxInfos.vue'
-//import Map from './components/Map.vue'
 import BaseMap from './components/BaseMap.vue'
 import { mapState } from 'vuex'
 
@@ -26,7 +25,6 @@ export default {
   name: 'App',
   components: {
     BoxInfos,
-    //Map,
     BaseMap
   },
   computed: {
