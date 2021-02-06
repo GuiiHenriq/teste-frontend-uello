@@ -192,38 +192,35 @@ $silver: #CCCCCC;
   z-index: 1;
 }
 
-.box-infos::-webkit-scrollbar-track {
+.box-infos[data-desktop]::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
 }
 
-.box-infos::-webkit-scrollbar {
+.box-infos[data-desktop]::-webkit-scrollbar {
 	width: 6px;
 	background-color: #F5F5F5;
 }
 
-.box-infos::-webkit-scrollbar-thumb {
+.box-infos[data-desktop]::-webkit-scrollbar-thumb {
 	background-color: $red;
 }
+
+.box-infos[data-desktop] {overflow: auto}
 
 .box-infos {
   background: $white;
   box-shadow: 5px 1px 9px rgba(0, 0, 0, 0.25);
   border-radius: 4px 0px 0px 4px;
   height: 90vh;
-  //max-width: 350px;
-  //width: 100%;  
   margin-left: 20px;
   padding: 20px;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-overflow-scrolling: auto;
   z-index: 1;
 
   &__help {
     background: #4B4B4D;
     border-radius: 4px;
-    padding: 12px 0;
+    padding: 10px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -757,7 +754,7 @@ $silver: #CCCCCC;
         background: $blue;
         border-radius: 4px;
         margin: 0 12px 15px 15px;
-        padding: 12px 0;
+        padding: 12px;
 
         p {
           text-align: center;
