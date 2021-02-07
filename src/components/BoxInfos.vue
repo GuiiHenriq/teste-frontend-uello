@@ -182,7 +182,7 @@ export default {
 [data-desktop] {display: block}
 [data-mobile] {display: none}
 $white: #FFFFFF;
-$red: #E63B4F;
+$red: #EA394F;
 $blue: #0B4F6C;
 $silver: #CCCCCC;
 

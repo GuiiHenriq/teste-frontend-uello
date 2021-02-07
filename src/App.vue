@@ -7,6 +7,10 @@
     <section class="content">
       <aside class="sidebar">
         <img src="./assets/logo.svg" alt="Logo Uello">
+
+        <div class="title-company" data-mobile>
+          <h1>{{nameCompany}}</h1>
+        </div>
       </aside>
 
       <BoxInfos />
@@ -36,6 +40,11 @@ export default {
 </script>
 
 <style lang="scss">
+[data-desktop] {display: block}
+[data-mobile] {display: none}
+$white: #FFFFFF;
+$red: #EA394F;
+
 #app {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,7 +63,7 @@ export default {
     width: 70px;
     height: 100vh;
     padding: 12px;
-    background: #EA394F;
+    background: $red;
   }
 }
 
@@ -70,7 +79,7 @@ export default {
   h1 {
     position: relative;
     font-size: 18px;
-    color: #EA394F;
+    color: $red;
     font-weight: 600;
     text-transform: uppercase;
 
@@ -79,7 +88,7 @@ export default {
       display: block;
       width: 3px;
       height: 100%;
-      background: #EA394F;
+      background: $red;
       position: absolute;
       top: 0;
       left: -10px;
@@ -99,6 +108,24 @@ export default {
       position: sticky;
       top: 0;
       z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title-company {
+        position: initial;
+        width: auto;
+        height: auto;
+        display: block;
+
+        h1 {
+          color: $white;
+
+          &::after {
+            background: $white;
+          }
+        }
+      }
     }
   }
 }
